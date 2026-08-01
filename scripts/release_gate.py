@@ -202,7 +202,7 @@ def main() -> int:
         run([sys.executable, "-m", "compileall", "-q", "src", "scripts", "tests"])
         checks["compileall"] = {"ok": True}
         if not args.skip_tests:
-            run([sys.executable, "-m", "ruff", "check", "."])
+            run([sys.executable, "-m", "ruff", "check", ".", "--no-cache"])
             run([sys.executable, "-m", "pytest", "-q"])
             checks["tests"] = {"ok": True}
         if not args.skip_build:
