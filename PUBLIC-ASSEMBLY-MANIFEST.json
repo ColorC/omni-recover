@@ -5,7 +5,7 @@
     {
       "path": ".github/workflows/ci.yml",
       "size": 976,
-      "sha256": "c24306ace8083cb2f3d11b8854a6ef904197776a35738c158c1dc186e651f710"
+      "sha256": "99343d905d48f429d8229cf673d6e3da4b18e5388081211e8aa6d92d0fb163c2"
     },
     {
       "path": ".gitignore",
@@ -69,8 +69,8 @@
     },
     {
       "path": "pyproject.toml",
-      "size": 1910,
-      "sha256": "8524ef2da4f2e20543865419ec3f6c91d3aea55aa99a354ef15c01f76f997684"
+      "size": 1932,
+      "sha256": "2091cba6efabecc15f6c361b9c9654fe3571e07ac204a310acfaccf20bd27213"
     },
     {
       "path": "scripts/recover.py",

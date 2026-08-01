@@ -22,7 +22,7 @@ classifiers = [
 dependencies = ["PyYAML>=6.0"]
 
 [project.optional-dependencies]
-dev = ["build>=1.2", "pytest>=8", "ruff>=0.15,<0.17"]
+dev = ["build>=1.2", "hatchling>=1.25,<2", "pytest>=8", "ruff>=0.15,<0.17"]
 
 [project.scripts]
 omni-recover = "omnicompany.packages.services.recovery.entrypoint:main"
