@@ -1,5 +1,8 @@
 # Changelog
 
+The public project is now named **AI Ate My Work**. The package and CLI remain
+`omni-recover` for compatibility.
+
 ## 0.1.0a2 - 2026-08-01
 
 - Add byte-safe evidence collection and planning for Codex, Claude Code, Kimi

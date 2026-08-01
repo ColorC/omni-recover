@@ -19,8 +19,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 519,
-      "sha256": "cb23fec5177ef870fa41152bbbe3a6aa3fd9b454357753888565ab23410e0386"
+      "size": 633,
+      "sha256": "e7ecc1d63aad40010423c629668ad4a47b2e59203a1ce700699959ca320bbbb9"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -34,8 +34,8 @@
     },
     {
       "path": "README.md",
-      "size": 3563,
-      "sha256": "8e88aefb31957f0c848664f9349661175b28b25febe8514efe45112fd0886876"
+      "size": 3731,
+      "sha256": "be68ad0168c8a60936fc7b9f2b83818bee954150055617565fc800edc8c36b26"
     },
     {
       "path": "SECURITY.md",
@@ -69,8 +69,8 @@
     },
     {
       "path": "pyproject.toml",
-      "size": 1932,
-      "sha256": "2091cba6efabecc15f6c361b9c9654fe3571e07ac204a310acfaccf20bd27213"
+      "size": 1966,
+      "sha256": "f62a4c42c5e7a64273d61d96399b179abf42770675bc98bbee3a7338a2e6e3b8"
     },
     {
       "path": "scripts/recover.py",

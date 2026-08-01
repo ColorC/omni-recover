@@ -1,10 +1,14 @@
-# omni-recover
+# AI Ate My Work
 
-[![CI](https://github.com/ColorC/omni-recover/actions/workflows/ci.yml/badge.svg)](https://github.com/ColorC/omni-recover/actions/workflows/ci.yml)
+[![CI](https://github.com/ColorC/ai-ate-my-work/actions/workflows/ci.yml/badge.svg)](https://github.com/ColorC/ai-ate-my-work/actions/workflows/ci.yml)
 
-`omni-recover` reconstructs missing workspace files from byte evidence already
-recorded by AI coding sessions. The alpha release understands Codex, Claude
-Code, Kimi Code and OpenCode, and exposes extension points for other providers.
+**Recover files your AI coding agent accidentally deleted, overwrote, or wiped
+out with `git checkout`.**
+
+`omni-recover` is the command-line tool behind AI Ate My Work. It reconstructs
+missing workspace files from byte evidence already recorded by AI coding
+sessions. The alpha release understands Codex, Claude Code, Kimi Code and
+OpenCode, and exposes extension points for other providers.
 
 It is deliberately conservative: it restores exact bytes only when the
 timeline and path evidence support them, never replays historical shell
@@ -15,8 +19,8 @@ commands, and never overwrites an existing file by default.
 Python 3.10 or newer is required.
 
 ```bash
-git clone https://github.com/ColorC/omni-recover.git
-cd omni-recover
+git clone https://github.com/ColorC/ai-ate-my-work.git
+cd ai-ate-my-work
 python -m pip install .
 omni-recover providers
 ```

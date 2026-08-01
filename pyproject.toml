@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "omni-recover"
 version = "0.1.0a2"
-description = "Byte-safe cross-provider recovery from AI coding-session evidence"
+description = "Recover files an AI coding agent accidentally deleted, overwrote, or erased with git checkout"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
@@ -31,9 +31,9 @@ omni-recover = "omnicompany.packages.services.recovery.entrypoint:main"
 # Third-party distributions register read-only ProviderAdapter factories here.
 
 [project.urls]
-Homepage = "https://github.com/ColorC/omni-recover"
-Repository = "https://github.com/ColorC/omni-recover"
-Issues = "https://github.com/ColorC/omni-recover/issues"
+Homepage = "https://github.com/ColorC/ai-ate-my-work"
+Repository = "https://github.com/ColorC/ai-ate-my-work"
+Issues = "https://github.com/ColorC/ai-ate-my-work/issues"
 
 [tool.hatch.build]
 exclude = ["**/__pycache__/**", "**/*.pyc"]
