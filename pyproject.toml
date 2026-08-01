@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "omni-recover"
+version = "0.1.0a2"
+description = "Byte-safe cross-provider recovery from AI coding-session evidence"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "ColorC and omni-recover contributors" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: System :: Archiving :: Backup",
+]
+dependencies = ["PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+omni-recover = "omnicompany.packages.services.recovery.entrypoint:main"
+
+[project.entry-points."omni_recover.providers"]
+# Third-party distributions register read-only ProviderAdapter factories here.
+
+[project.urls]
+Homepage = "https://github.com/ColorC/omni-recover"
+Repository = "https://github.com/ColorC/omni-recover"
+Issues = "https://github.com/ColorC/omni-recover/issues"
+
+[tool.hatch.build]
+exclude = ["**/__pycache__/**", "**/*.pyc"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/omnicompany"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src",
+  "/scripts",
+  "/tests",
+  "/config",
+  "/docs",
+  "/skills",
+  "/README.md",
+  "/LICENSE",
+  "/SECURITY.md",
+  "/CONTRIBUTING.md",
+  "/AI_DISCLOSURE.md",
+  "/CHANGELOG.md",
+  "/PUBLIC-ASSEMBLY-MANIFEST.json",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/session_recovery_cli.py" = ["E402"]
+"src/omnicompany/packages/services/recovery/_legacy/session_recovery_cli.py" = ["E402"]

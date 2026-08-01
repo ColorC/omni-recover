@@ -1,0 +1,191 @@
+{
+  "schema": "omni-recover-public-assembly.v1",
+  "policy_version": "omni-recover-public-2026-08-01.1",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 965,
+      "sha256": "b9a82ad9f7cc09f6165fe535f7506ebb313bc971ee82eb44759146824b33baad"
+    },
+    {
+      "path": ".gitignore",
+      "size": 108,
+      "sha256": "532f783e8de0ef59330c92e7c7c8dbd20886ddb4ee5b6abbc212f9ca3b263954"
+    },
+    {
+      "path": "AI_DISCLOSURE.md",
+      "size": 415,
+      "sha256": "2d24793c71838e7ea7ad0584bfa1e6b43b6c4f805768d3eb456a254c632f43c3"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 519,
+      "sha256": "cb23fec5177ef870fa41152bbbe3a6aa3fd9b454357753888565ab23410e0386"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 1079,
+      "sha256": "5f3baf2b9147e3cb6111d99d35d139cb3337e671476c6dd48ea74030d2255f2f"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1063,
+      "sha256": "35b09b1b666b977efc8f055395461de36c908fa473cea0df1845ad7b7d66585c"
+    },
+    {
+      "path": "README.md",
+      "size": 3563,
+      "sha256": "8e88aefb31957f0c848664f9349661175b28b25febe8514efe45112fd0886876"
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 867,
+      "sha256": "8a5a06b2ba520ca441239e4e31dfeb5437684231111ea30e5a6f70a94f490edc"
+    },
+    {
+      "path": "config/recovery/probes/example.yaml",
+      "size": 358,
+      "sha256": "64f930e988ec8190305878f8f31b9b9bbf17211a682166fb54676bd4e7079e56"
+    },
+    {
+      "path": "config/recovery/providers.d/README.md",
+      "size": 706,
+      "sha256": "1bdbbdfb8f76c04c33e1352c8934f7b5513eb4e75375ea64403e925dc2ada33c"
+    },
+    {
+      "path": "config/recovery/providers.d/provider.schema.json",
+      "size": 639,
+      "sha256": "78c34603789bb1ecee17c6cdffdbbe614e74ea59fe0d066e78b33425ee22ca28"
+    },
+    {
+      "path": "docs/LIVE-CLI-RECOVERY-CONTRACT-2026-08-01.md",
+      "size": 4939,
+      "sha256": "5ac94cc208051bacfbf24b350939671234851cf9bd900fb3b7bd98df5b257dfb"
+    },
+    {
+      "path": "docs/UNIFIED-EVIDENCE-CONTRACT.md",
+      "size": 3795,
+      "sha256": "b9f599c0c23e0ca004b0263cc8071cdafd5f987da60805bc14df424cac6b54df"
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 1852,
+      "sha256": "4f917b47dc29fbae1c4bbe8c0e85d8f3778a84d201674a3857b8e78954d34cdf"
+    },
+    {
+      "path": "scripts/recover.py",
+      "size": 197,
+      "sha256": "9b5406bc1cb7925a7bb9bc7c953b896f077f079033fd711aa7bb53b0e6bb0630"
+    },
+    {
+      "path": "scripts/recovery_baseline_cli.py",
+      "size": 93787,
+      "sha256": "487cba9ec6f7fe659db1c0fe4ab068c1e3c31d462dff3387b4272aac9410a5ac"
+    },
+    {
+      "path": "scripts/release_gate.py",
+      "size": 8319,
+      "sha256": "28f816aa6a6d42477c3ca7498b84ba8ff1ccd20856410dde208ef60ea78964de"
+    },
+    {
+      "path": "scripts/session_recovery_cli.py",
+      "size": 45859,
+      "sha256": "d12b946271b3b42baa7722d598dc77690d1ff2223c7f1e2f03558b339af85a80"
+    },
+    {
+      "path": "skills/recover-session-files/SKILL.md",
+      "size": 2552,
+      "sha256": "a65658b8eaeee58d00a46df12bbff85cbafec7d681b6101dc2da860125ef58db"
+    },
+    {
+      "path": "src/omnicompany/__init__.py",
+      "size": 87,
+      "sha256": "1cf1867cdaba1699c83eb19936b82cd9f03fcf8ed08e9020cf117d93ef5a90a8"
+    },
+    {
+      "path": "src/omnicompany/packages/__init__.py",
+      "size": 66,
+      "sha256": "0b31649b39cd5a15a8960126118111f0535919b5565cd81879ee0a6fedb2a4a7"
+    },
+    {
+      "path": "src/omnicompany/packages/services/__init__.py",
+      "size": 65,
+      "sha256": "31130b34b5b4b87832314bd67ef650b0968d3b84379164a92fa19905d90a5746"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/__init__.py",
+      "size": 635,
+      "sha256": "bb52464f6d8f0954b1f8aed5c18f2bd83e8643c2198d5505ab4139f23af3df81"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/_legacy/__init__.py",
+      "size": 70,
+      "sha256": "d1045a15b923b80c49a558e9399b0ce6ce5dec2b38ee4dcb2b5343d41603e460"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/_legacy/recovery_baseline_cli.py",
+      "size": 93787,
+      "sha256": "487cba9ec6f7fe659db1c0fe4ab068c1e3c31d462dff3387b4272aac9410a5ac"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/_legacy/session_recovery_cli.py",
+      "size": 45859,
+      "sha256": "d12b946271b3b42baa7722d598dc77690d1ff2223c7f1e2f03558b339af85a80"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/adapters.py",
+      "size": 26912,
+      "sha256": "f2d6c5f9c2616b1844a8c9fa23b352126f9696c6feebdb0b5d3c58a5b2320150"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/commands.py",
+      "size": 8809,
+      "sha256": "3439715de65abf5018f540792017b9c0fd86ae544bf1a5f16be8b0afc5463759"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/entrypoint.py",
+      "size": 1571,
+      "sha256": "2e3fafa82cee0b8b58a1be7e3554d6b1ab52b55397e2edb42bcfe573a0d97e86"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/evidence.py",
+      "size": 16175,
+      "sha256": "5c91c6f8394d247c23846a59af683dd663844ad2983ef2c3dc0c3158f58e1d7f"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/evidence_index.py",
+      "size": 5818,
+      "sha256": "74a4239ad573e7e507d772cda159a5bd25907a49f038a04528849a17da446b4f"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/providers.py",
+      "size": 7160,
+      "sha256": "467dba305f2cab95ab820d142d997b6825aac45e585613417a6ad24fa6a57a8b"
+    },
+    {
+      "path": "src/omnicompany/packages/services/recovery/runtime.py",
+      "size": 15393,
+      "sha256": "1321c19a843145adfd26a4eec18602c94cc1f0620e2e8a117dbc7dd8ce24893e"
+    },
+    {
+      "path": "tests/platform/test_session_recovery_cli.py",
+      "size": 17303,
+      "sha256": "21c69fd3dcbcd22256c1365d8e5b0d6703ba8efb02dd0a177f95853f1f6e1026"
+    },
+    {
+      "path": "tests/recovery/test_universal_recovery_pipeline.py",
+      "size": 18787,
+      "sha256": "665bd3efb22e91f4a1964df3f940bd9630559a06ac876d3e8e8101a20769e1e8"
+    },
+    {
+      "path": "tests/scripts/test_recovery_baseline_cli.py",
+      "size": 29835,
+      "sha256": "7bb951b99a1795afceb004b3a6fe6c464b324a9847948f8dc3869a1ccd19277d"
+    },
+    {
+      "path": "tests/test_packaging_surface.py",
+      "size": 469,
+      "sha256": "cb1e86dd4ade2a022119f4cf6fabdbd7d032661b974e66e91122d775c003b190"
+    }
+  ]
+}
