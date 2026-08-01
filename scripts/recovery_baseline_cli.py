@@ -1009,15 +1009,29 @@ def _expanded_worktree_paths(paths: Iterable[str]) -> set[str]:
 
 
 def _merge_case_equivalent_chains(
-    chains: dict[str, list[dict[str, Any]]], preferred_paths: Iterable[str],
+    chains: dict[str, list[dict[str, Any]]],
+    preferred_paths: Iterable[str],
+    authoritative_paths: Iterable[str] = (),
 ) -> int:
-    """Collapse Windows session path aliases onto Git/worktree spelling."""
+    """Collapse Windows session path aliases onto unambiguous repository spelling.
 
-    if os.name != "nt":
-        return 0
-    canonical: dict[str, str] = {}
+    Evidence may be recovered on a different operating system from the one
+    that produced it, so the rule cannot depend on the scanner host.  Preserve
+    distinct case-sensitive repository paths whenever Git/worktree evidence
+    contains more than one spelling for the same folded identity.
+    """
+
+    preferred_by_identity: dict[str, set[str]] = {}
     for relative in preferred_paths:
-        canonical.setdefault(relative.casefold(), relative)
+        preferred_by_identity.setdefault(relative.casefold(), set()).add(relative)
+    authoritative_by_identity: dict[str, set[str]] = {}
+    for relative in authoritative_paths:
+        authoritative_by_identity.setdefault(relative.casefold(), set()).add(relative)
+    canonical: dict[str, str] = {}
+    for identity, preferred_spellings in preferred_by_identity.items():
+        spellings = authoritative_by_identity.get(identity, preferred_spellings)
+        if len(spellings) == 1:
+            canonical[identity] = next(iter(spellings))
     merged = 0
     for relative in list(chains):
         target = canonical.get(relative.casefold())
@@ -1478,10 +1492,11 @@ def discover_baselines(args: argparse.Namespace) -> int:
             chains.setdefault(record["path"], []).append(record)
     mark_phase("worktree_records")
 
+    git_paths = [str(record["path"]) for record in git_records]
     case_aliases_merged = _merge_case_equivalent_chains(
         chains,
-        [str(record["path"]) for record in git_records]
-        + [str(record["path"]) for record in worktree_records],
+        git_paths + [str(record["path"]) for record in worktree_records],
+        git_paths,
     )
 
     queues: dict[str, list[dict[str, Any]]] = {

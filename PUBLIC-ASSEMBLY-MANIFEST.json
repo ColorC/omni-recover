@@ -79,8 +79,8 @@
     },
     {
       "path": "scripts/recovery_baseline_cli.py",
-      "size": 93787,
-      "sha256": "487cba9ec6f7fe659db1c0fe4ab068c1e3c31d462dff3387b4272aac9410a5ac"
+      "size": 94644,
+      "sha256": "fb289b64072de0614cbdd8d8ea22b74c79031439e12821ec120bf8599961b979"
     },
     {
       "path": "scripts/release_gate.py",
@@ -124,8 +124,8 @@
     },
     {
       "path": "src/omnicompany/packages/services/recovery/_legacy/recovery_baseline_cli.py",
-      "size": 93787,
-      "sha256": "487cba9ec6f7fe659db1c0fe4ab068c1e3c31d462dff3387b4272aac9410a5ac"
+      "size": 94644,
+      "sha256": "fb289b64072de0614cbdd8d8ea22b74c79031439e12821ec120bf8599961b979"
     },
     {
       "path": "src/omnicompany/packages/services/recovery/_legacy/session_recovery_cli.py",
@@ -179,8 +179,8 @@
     },
     {
       "path": "tests/scripts/test_recovery_baseline_cli.py",
-      "size": 29835,
-      "sha256": "7bb951b99a1795afceb004b3a6fe6c464b324a9847948f8dc3869a1ccd19277d"
+      "size": 30483,
+      "sha256": "3f143f84035d9d0a805c565ba9189286d4e42f72ed1f7f48a7fd08dd83f9abd3"
     },
     {
       "path": "tests/test_packaging_surface.py",

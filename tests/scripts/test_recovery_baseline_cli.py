@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import importlib.util
 import os
 from pathlib import Path
 import subprocess
@@ -9,6 +10,7 @@ import time
 
 
 CLI = Path(__file__).parents[2] / "scripts" / "session_recovery_cli.py"
+BASELINE_CLI = Path(__file__).parents[2] / "scripts" / "recovery_baseline_cli.py"
 
 
 def _run(*arguments: object, cwd: Path) -> dict:
@@ -197,6 +199,22 @@ def test_windows_case_aliases_collapse_onto_git_path(tmp_path: Path) -> None:
     all_paths = [item["path"] for rows in plan["queues"].values() for item in rows]
     assert [path for path in all_paths if path.casefold() == "a.py"] == ["a.py"]
     assert plan["inventories"]["path_identity"]["case_aliases_merged"] >= 1
+
+
+def test_case_aliases_stay_distinct_when_repository_spelling_is_ambiguous() -> None:
+    spec = importlib.util.spec_from_file_location("recovery_baseline_case_test", BASELINE_CLI)
+    assert spec and spec.loader
+    baseline = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(baseline)
+    chains = {
+        "a.py": [{"path": "a.py"}],
+        "A.py": [{"path": "A.py"}],
+    }
+
+    merged = baseline._merge_case_equivalent_chains(chains, ["a.py", "A.py"])
+
+    assert merged == 0
+    assert set(chains) == {"a.py", "A.py"}
 
 
 def test_auto_defers_session_walk_only_for_byte_converged_snapshot_cohort(tmp_path: Path) -> None:
